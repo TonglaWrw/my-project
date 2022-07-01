@@ -22,9 +22,10 @@ export const AuthProvider = ({children}) => {
 
     const bid = (itemId, price, bids) => {
         if (!currentUser) {
-            return setGlobalmsg ("You cannot bid please login first");
+            return setGlobalmsg("You cannot bid please login first");
         }
-        let newPrice = Math.floor(price + bids);
+        const newPrice = Math.floor(price + bids);
+        
         const db =  firestoreApp.collection('auctiondb');
 
         return db.doc(itemId).update({

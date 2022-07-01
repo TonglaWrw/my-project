@@ -37,7 +37,7 @@ const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
                             ) : props.owner.email === props.item.curWinner ? (
                                 <h5 className='display-6'>You win!</h5>
                             ) : (
-                                <div onClick={() => props.bid(props.item.id, props.item.curPrice)} className='btn btn-outline-secondary'>Bid</div>
+                                <div onClick={() => props.bid(props.item.id, props.item.curPrice, props.item.bidPrice)} className='btn btn-outline-secondary'>Bid</div>
                             )}
                         </div>
                         <div className='display-6'>{props.item.curPrice} bath</div>

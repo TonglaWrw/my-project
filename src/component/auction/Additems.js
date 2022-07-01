@@ -43,7 +43,8 @@ export const Additems = ({ setItem }) => {
 
         let hours = Math.floor((1000 * 60 * 60) * Duration.current.value)
         let currentDate = Date.now();
-
+        let startprices = Math.floor(Startprice.current.value)
+        let bidprices = Math.floor(Bidprice.current.value)
         // let dueDate = currentDate.setHours(
         //     currentDate.getHours() + hours
         // )
@@ -52,8 +53,8 @@ export const Additems = ({ setItem }) => {
             email: currentUser.email,
             name: Name.current.value,
             desc: Desc.current.value,
-            curPrice: Startprice.current.value,
-            bidPrice: Bidprice.current.value,
+            curPrice: startprices,
+            bidPrice: bidprices,
             duration: dueDate,
             image: Image.current.files[0],
         }
